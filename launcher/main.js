@@ -1,6 +1,12 @@
 const { app, BrowserWindow, ipcMain } = require('electron');
 const path = require('path');
 
+const { ipcMain } = require('electron');
+const { launchGame } = require('./core/launcher');
+
+ipcMain.handle('launch-game', () => {
+  launchGame();
+});
 function createWindow() {
   const win = new BrowserWindow({
     width: 1200,
