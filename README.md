@@ -18,7 +18,7 @@ Mods, plugins, and version management — all in one place.
 ## 🚀 Installation
 
 ```bash
-git clone https://github.com/yourname/buildnow-nexus.git
+git clone https://github.com/yourname/buildnow-core.git
 cd buildnow-nexus
 npm install
 npm start
