@@ -20,3 +20,22 @@ async function loadVersions() {
 }
 
 loadVersions();
+
+async function loadVersions() {
+  const versions = await window.launcherAPI.getVersions();
+  const list = document.getElementById("versions");
+
+  list.innerHTML = "";
+
+  versions.forEach(v => {
+    const li = document.createElement("li");
+    li.innerText = v;
+
+    li.onclick = async () => {
+      await window.launcherAPI.setVersion(v);
+      alert("Selected version: " + v);
+    };
+
+    list.appendChild(li);
+  });
+}
