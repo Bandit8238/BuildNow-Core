@@ -21,3 +21,9 @@ function createWindow() {
 }
 
 app.whenReady().then(createWindow);
+
+const { setActiveVersion } = require('./core/versionManager');
+
+ipcMain.handle('set-version', (e, v) => {
+  setActiveVersion(v);
+});
