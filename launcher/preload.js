@@ -5,4 +5,5 @@ contextBridge.exposeInMainWorld('launcherAPI', {
   getVersions: () => ipcRenderer.invoke('get-versions'),
   loadMods: () => ipcRenderer.invoke('load-mods'),
   runPlugins: () => ipcRenderer.invoke('run-plugins')
+  launchGame: () => ipcRenderer.invoke('launch-game')
 });
